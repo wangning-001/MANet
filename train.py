@@ -5,28 +5,16 @@ from model import PconvUNetFull
 def train():
     parser = argparse.ArgumentParser()
     parser.add_argument('--train_root', type=str, default='./datasets/train')
-    # parser.add_argument('--train_root', type=str, default='/data/IJCAI/celeba/train')
-    # parser.add_argument('--train_root', type=str, default='/data/IJCAI/place2/train')
     parser.add_argument('--train_mask_root', type=str, default='./irregular_mask/mask_aug')
     parser.add_argument('--train_edge_root', type=str, default='./datasets/train')
-    # parser.add_argument('--train_edge_root', type=str, default='/data/IJCAI/celeba/train')
-    # parser.add_argument('--train_edge_root', type=str, default='/data/IJCAI/place2/train')
 
     parser.add_argument('--test_root', type=str, default='./datasets/gt')
-    # parser.add_argument('--test_root', type=str, default='/data/IJCAI/celeba/val_100')
-    # parser.add_argument('--test_root', type=str, default='/data/IJCAI/place2/val')
     parser.add_argument('--test_mask_root', type=str, default='./test_mask/paris/paris_0.5')
     parser.add_argument('--test_edge_root', type=str, default='./datasets/gt')
-    # parser.add_argument('--test_edge_root', type=str, default='/data/IJCAI/celeba/val_100')
-    # parser.add_argument('--test_edge_root', type=str, default='/data/IJCAI/place2/val')
 
     parser.add_argument('--val_root', type=str, default='./datasets/gt')
-    # parser.add_argument('--val_root', type=str, default='/data/IJCAI/celeba/val_100')
-    # parser.add_argument('--val_root', type=str, default='/data/IJCAI/place2/val')
     parser.add_argument('--val_mask_root', type=str, default='./test_mask/paris/paris_0.5')
     parser.add_argument('--val_edge_root', type=str, default='./datasets/gt')
-    # parser.add_argument('--val_edge_root', type=str, default='/data/IJCAI/celeba/val_100')
-    # parser.add_argument('--val_edge_root', type=str, default='/data/IJCAI/place2/val')
     
     parser.add_argument('--img_size', type=int, default=256)
     parser.add_argument('--mask_mode', type=int, default=1)
