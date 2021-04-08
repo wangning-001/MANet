@@ -21,7 +21,6 @@ def train():
     parser.add_argument('--sigma', type=int, default=2)
     parser.add_argument('--nms', type=int, default=1)
     parser.add_argument('--mask', type=int, default=3)
-    # parser.add_argument('--mask', type=int, default=1)
     parser.add_argument('--mode', type=int, default=1)
     parser.add_argument('--edge', type=int, default=1)
     parser.add_argument('--start_iter', type=int, default=0)
