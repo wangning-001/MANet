@@ -148,5 +148,5 @@ class PConvUNet(nn.Module):
         super().train(mode)
         if freeze_enc_bn:
             for name, module in self.named_modules():
-                if isinstance(module, nn.BatchNorm2d):#20190429修改
+                if isinstance(module, nn.BatchNorm2d):
                     module.eval()
